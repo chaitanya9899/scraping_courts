@@ -26,8 +26,6 @@ driver.get("https://oresundskraft.se/energiportalen/logga-in/")
 # In[140]:
 
 
-driver.find_element_by_class_name("cc-compliance").click()
-
 driver.find_element_by_xpath("/html/body/div[3]/div/div[1]/div/div[2]/div[2]/div[1]/input").send_keys("teknik.malmo@nyfosa.se")
 
 driver.find_element_by_xpath("/html/body/div[3]/div/div[1]/div/div[2]/div[2]/div[2]/input").send_keys("Kaffe2021")
