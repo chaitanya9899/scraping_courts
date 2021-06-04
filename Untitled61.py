@@ -1,9 +1,3 @@
-#!/usr/bin/env python
-# coding: utf-8
-
-# In[139]:
-
-
 import time
 import body as body
 from selenium import webdriver
@@ -15,17 +9,17 @@ from selenium.common.exceptions import NoSuchElementException,TimeoutException,J
 import pandas as pd
 from webdriver_manager.chrome import ChromeDriverManager
 
-
+# install and download to google 
 chrome_options = webdriver.ChromeOptions()
 driver=webdriver.Chrome(ChromeDriverManager().install(),chrome_options=chrome_options)
 driver.maximize_window()
-
+#web site url 
 driver.get("https://oresundskraft.se/energiportalen/logga-in/")
 
 
-# In[140]:
 
 
+#login details
 driver.find_element_by_xpath("/html/body/div[3]/div/div[1]/div/div[2]/div[2]/div[1]/input").send_keys("teknik.malmo@nyfosa.se")
 
 driver.find_element_by_xpath("/html/body/div[3]/div/div[1]/div/div[2]/div[2]/div[2]/input").send_keys("Kaffe2021")
@@ -36,16 +30,8 @@ driver.execute_script(('window.scrollTo(0,50);'))
 startlink=1
 time.sleep(5)
 
-
-# In[141]:
-
-
+# login into website
 driver.find_element_by_xpath('/html/body/div[2]/div[2]/div[4]/div[2]/div/div[1]/div[2]/div[2]/div[2]/div/div[2]/div/ul/li[1]').click()
-
-
-# In[142]:
-
-
 time.sleep(5)
 x=100
 for i in range(0,30):
@@ -78,7 +64,7 @@ for i in range(0,30):
     try:
         driver.find_element_by_xpath("/html/body/div[2]/div[2]/div[4]/div[2]/div/div[4]/div[2]/div[2]/div/div/span").click()
     except:
-        print("Completed")
+        print("Completed Done")
         
         
         
